@@ -96,45 +96,7 @@
         }
 
 
-        function updateArpNotesDisplay() {
-            const canvas = document.getElementById("arpNotesDisplay");
-            const ctx = canvas.getContext("2d");
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            
-            // Set font size and weight
-            ctx.font = "bold 11px Arial";
-            ctx.fillStyle = "#FFFFFF";
-            
-            const columns = 16;
-            const noteWidth = ctx.measureText("W#").width; 
-            const spacing = noteWidth + 7; 
-            let x = 10;
-            let y = 30;
-            
-            let currentColumn = 0;
-
-            arpNotes.forEach(note => {
-                let noteText = note !== null ? frequencyToNoteName(note) : "Rest";
-
-                // Check if the next note (including its spacing) would overflow the canvas width
-                if (x + spacing > canvas.width) {
-                    currentColumn = 0;
-                    x = 10;
-                    y += 30;
-                }
-
-                ctx.fillText(noteText, x, y);
-                        
-                currentColumn++;
-                if (currentColumn >= columns) {
-                    currentColumn = 0;
-                    x = 10;
-                    y += 30;
-                } else {
-                    x += spacing;
-                }
-            });
-        }
+        
 
         // arpToggle.js
         function toggleArpeggiator(){

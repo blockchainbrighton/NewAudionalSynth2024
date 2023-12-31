@@ -27,7 +27,6 @@
                         console.log(`Note On. MIDI note: ${n}, Frequency: ${e}`);
                         if (isArpeggiatorOn) {
                             arpNotes.push(e);
-                            updateArpNotesDisplay();
                         } else {
                             playMS10TriangleBass(e, t / 127);
                         }

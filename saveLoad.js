@@ -52,7 +52,6 @@ function loadSettings() {
             
             if (settings.arpNotes) {
                 arpNotes = settings.arpNotes;
-                updateArpNotesDisplay();
             }
         };
         reader.readAsText(file);

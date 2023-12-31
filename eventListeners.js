@@ -35,14 +35,5 @@
 
 document.getElementById("addRest").addEventListener("click", function() {
     arpNotes.push(null); // Using null to represent a rest
-    updateArpNotesDisplay();
 });
 
-// Add an event listener to detect nudge slider activity
-document.getElementById("timingAdjust").addEventListener('input', function() {
-    isNudgeActive = true;
-});
-
-document.getElementById("timingAdjust").addEventListener('change', function() {
-    isNudgeActive = false; // Reset when the user stops adjusting the slider
-});

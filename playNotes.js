@@ -74,5 +74,4 @@ function playArpNotes() {
             } else {
                 console.log("[playArpNotes] Arpeggiator is off or arpNotes is empty.");
             }
-            updateArpNotesDisplay();
         }

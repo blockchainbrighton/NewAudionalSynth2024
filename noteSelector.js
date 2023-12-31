@@ -64,7 +64,6 @@
            console.log(`[KEYDOWN] Key: ${e.code}, MIDI note: ${o}, Frequency: ${n}`);
            playMS10TriangleBass(n);
            arpNotes.push(n);
-           updateArpNotesDisplay();
        }
    });
    document.addEventListener("keyup", function(e) {
